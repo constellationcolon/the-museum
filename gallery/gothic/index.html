@@ -12,9 +12,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- FONT
         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-        <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+        <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600,700" rel="stylesheet" type="text/css">
         <link href='http://fonts.googleapis.com/css?family=UnifrakturMaguntia' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Raleway:800' rel='stylesheet' type='text/css'>
         <!-- CSS
         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" rel="stylesheet" type="text/css">
@@ -22,6 +21,8 @@
         <!-- Favicon
         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
         <link rel="icon" type="image/png" href="images/favicon.png">
+
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
         <style>
         body, html
         {
@@ -31,9 +32,10 @@
         }
         h7
         {
-            font-weight: 800;
+            font-weight: 700;
             font-size: .7em;
             text-transform: uppercase;
+            letter-spacing: 1px;
         }
         .wrapper
         {
@@ -54,7 +56,8 @@
             width: 100vw;
             height: 99vh;
             background-color: #241b14;
-            z-index: 1;
+            z-index: 100;
+            position: relative;
 
             color: #c1b38f;
         }
@@ -64,16 +67,18 @@
             x: 0;
             y: 0;
             width: 100%;
-            z-index: -1;
+            z-index: -5;
         }
         #lookup
         {
             position: fixed;
             left: 50%;
             top: 5%;
-            margin-left: -35px;
+            margin-left: -70px;
             color: white;
             z-index: 0;
+            opacity: 0.7;
+            filter: alpha(opacity=70);
         }
         </style>
     </head>
@@ -82,23 +87,23 @@
             <div class="container label">
                 <div class="row" style="margin-top: 10%">
                     <div class="twelve columns">
-                        <p style="font-family: UnifrakturMaguntia; font-size: 2em; color: 7f8b58;">Gloucester Cathedral</p>
+                        <p style="font-family: UnifrakturMaguntia; font-size: 2em; color: #b48742;">Gloucester Cathedral</p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="one-third column">
-                        <img style="width: 100%;" src="gloucester_cathedral_wide.png">
+                        <img style="width: 100%; margin-bottom: 21px;" src="gloucester_cathedral_wide.png">
                         <p>
-                            <h7>Artist</h7> Unknown
-                            <br><h7>Formal Title</h7> Cathedral Church of St Peter and the Holy and Indivisible Trinity
-                            <br><h7>Date</h7> 1089–1499
-                            <br><h7>Medium/Materials</h7> Minchinhampton and Painswick stones
-                            <br><h7>Current Location</h7> Gloucester, Gloucestershire, England
+                            <h7>Artist</h7>&nbsp;&nbsp; Unknown
+                            <br><h7>Formal Title</h7>&nbsp;&nbsp; Cathedral Church of St Peter and the Holy and Indivisible Trinity
+                            <br><h7>Date</h7>&nbsp;&nbsp; 1089–1499
+                            <br><h7>Medium/Materials</h7>&nbsp;&nbsp; Minchinhampton and Painswick stones
+                            <br><h7>Current Location</h7>&nbsp;&nbsp; Gloucester, Gloucestershire, England
                         </p>
                         </div>
                     <div class="one-third column">
                         <p>
-                            First founded in 678-679, and then rebuilt starting 1089, the Gloucester Cathedral of today features many of the classic hallmarks of the Gothic architectural style that originated in 12th century France. Although extensively embellished with its own particular Romanesque and Perpendicular flair, the cathedral's soaring architectural style still retains the Gothic emphasis on creating lofty, uplifting spaces for the worship and veneration of the heavenly father.
+                            First founded in 678, and then rebuilt starting 1089, the Gloucester Cathedral of today features many of the classic hallmarks of the Gothic architectural style that originated in 12th century France. Although extensively embellished with its own particular Romanesque and Perpendicular flair, the cathedral's soaring architectural style still retains the Gothic emphasis on creating lofty, uplifting spaces for the worship and veneration of the heavenly father.
                         </p>
                         <p>&nbsp;&nbsp;&nbsp;&nbsp;
                             Its classic pointed Gothic arches, high ceiling, and thin, delicate-looking fluted columns all contribute towards emphasising its vertical extent.
@@ -115,14 +120,16 @@
         <div class="wrapper">
             <img id="gothic-artifact" src="gloucester_cathedral.png">
         </div>
-<!--         <div id="lookup">
-            <strong>LOOK UP!</strong>
-        </div> -->
+        <div id="lookup">
+            <h5 style="letter-spacing: 4px;">LOOK UP!</h5>
+        </div>
     </body>
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script>
         $(window).load(function() {
             $("html, body").animate({ scrollTop: $(document).height() }, 2000);
+        });
+        $( window ).scroll(function() {
+          $("#lookup").css( "display", "none" ).fadeIn( "slow" );
         });
     </script>
 </html>
