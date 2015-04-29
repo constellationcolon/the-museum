@@ -7,32 +7,122 @@
         <title>the{&nbsp;&nbsp;}museum</title>
         <meta name="description" content="">
         <meta name="author" content="">
-        <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-        <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <!-- Mobile Specific Metas
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- FONT
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+        <link href='http://fonts.googleapis.com/css?family=UnifrakturMaguntia' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Raleway:800' rel='stylesheet' type='text/css'>
+        <!-- CSS
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" rel="stylesheet" type="text/css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" rel="stylesheet" type="text/css">
+        <!-- Favicon
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <link rel="icon" type="image/png" href="images/favicon.png">
         <style>
-            body, html
-            {
-                width: 100%;
-                height: 100%;
-            }
-            #gothic-artifact
-            {
-                position: absolute;
-                display: block;
-                width: 100vw;
-            }
+        body, html
+        {
+            width: 100%;
+            height: 100%;
+            margin: 0 0 0 0;
+        }
+        h7
+        {
+            font-weight: 800;
+            font-size: .7em;
+            text-transform: uppercase;
+        }
+        .wrapper
+        {
+            position: relative;
+            width: 100vw;
+            display: block;
+        }
+        .label
+        {
+            position: absolute;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+        }
+        #gothic-label
+        {
+            width: 100vw;
+            height: 99vh;
+            background-color: #241b14;
+            z-index: 1;
+
+            color: #c1b38f;
+        }
+        #gothic-artifact
+        {
+            position: absolute;
+            x: 0;
+            y: 0;
+            width: 100%;
+            z-index: -1;
+        }
+        #lookup
+        {
+            position: fixed;
+            left: 50%;
+            top: 5%;
+            margin-left: -35px;
+            color: white;
+            z-index: 0;
+        }
         </style>
     </head>
     <body>
-        <!-- Primary Page Layout
-        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-        <img id="gothic-artifact" src="gloucester_cathedral.png">
-        <script>
-
-            $(document).ready(function() { $(document).scrollTop(1000) });
-            console.log($(document).height());
-        </script>
-        <!-- End Document
-        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <div id="gothic-label">
+            <div class="container label">
+                <div class="row" style="margin-top: 10%">
+                    <div class="twelve columns">
+                        <p style="font-family: UnifrakturMaguntia; font-size: 2em; color: 7f8b58;">Gloucester Cathedral</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-third column">
+                        <img style="width: 100%;" src="gloucester_cathedral_wide.png">
+                        <p>
+                            <h7>Artist</h7> Unknown
+                            <br><h7>Formal Title</h7> Cathedral Church of St Peter and the Holy and Indivisible Trinity
+                            <br><h7>Date</h7> 1089–1499
+                            <br><h7>Medium/Materials</h7> Minchinhampton and Painswick stones
+                            <br><h7>Current Location</h7> Gloucester, Gloucestershire, England
+                        </p>
+                        </div>
+                    <div class="one-third column">
+                        <p>
+                            First founded in 678-679, and then rebuilt starting 1089, the Gloucester Cathedral of today features many of the classic hallmarks of the Gothic architectural style that originated in 12th century France. Although extensively embellished with its own particular Romanesque and Perpendicular flair, the cathedral's soaring architectural style still retains the Gothic emphasis on creating lofty, uplifting spaces for the worship and veneration of the heavenly father.
+                        </p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                            Its classic pointed Gothic arches, high ceiling, and thin, delicate-looking fluted columns all contribute towards emphasising its vertical extent.
+                        </p>
+                    </div>
+                    <div class="one-third column">
+                        <p>
+                            This heightened space is lit primarily by natural light filtering in through stained glass windows high above, as well as from behind the high altar, pulling the observer forwards and upwards towards the heavens, away from the darkened spaces of the secular, earthly realm. This is not to say that the space has been completely cut off from the earthly realm; the intricate web of lierne vaulting (from French, <em>lier</em>, to link) supporting the ceiling is evocative of a forest of towering trees fanning its branches protectively over the vast space of the church, where the devout are visually guided towards transcending the secular world whilst glorying in the splendour of the Lord’s earthly creations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <img id="gothic-artifact" src="gloucester_cathedral.png">
+        </div>
+<!--         <div id="lookup">
+            <strong>LOOK UP!</strong>
+        </div> -->
     </body>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script>
+        $(window).load(function() {
+        $("html, body").scrollTop($(document).height());
+        });
+    </script>
 </html>
