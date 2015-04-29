@@ -122,7 +122,7 @@
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script>
         $(window).load(function() {
-        $("html, body").scrollTop($(document).height());
+            $("html, body").animate({ scrollTop: $(document).height() }, 1000);
         });
     </script>
 </html>
