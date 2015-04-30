@@ -44,6 +44,10 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
+        /*h8
+        {
+            color: rgb(120, 180, 160);
+        }*/
 
         .scene
         {
@@ -63,42 +67,94 @@
         .label
         {
             position: relative;
+            top: -100vh;
             width: 100vw;
             height: 100vh;
+            padding: 15vh 0 0 0;
         }
 
+        #navigation
+        {
+            position: fixed;
+            z-index: 1000;
+            width: 100vw;
+            height: 10vh;
+            top: 0;
+            display: table;
+            background-color: rgba(36, 27, 20, 0.5);
+
+            font-size: 0.8em;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-align: center;
+            color: rgb(100, 48, 18);
+        }
+
+        #navigation a
+        {
+            text-decoration: none;
+            padding: 0 10px 0 10px;
+            color: rgb(133, 102, 57);
+        }
+
+        #links
+        {
+            display: table-cell;
+            vertical-align: middle;
+        }
         </style>
     </head>
 
     <body>
+        <div id="navigation">
+            <div id="links">
+                <a href="../..">Home</a>
+                <a href="../roman">Roman</a>
+                <a href="../gothic">Gothic</a>
+                <a href="../renaissance">Renaissance</a>
+                <span style="padding: 0 10px 0 10px;">Dutch Golden Age</span>
+                <a href="../impressionism">Impressionism</a>
+                <a href="../modernarchitecture">Modern Architecture</a>
+                <a href="../neoplasticism">Neoplasticism</a>
+                <a href="../abstractexpressionism">Abstract Expressionism</a>
+            </div>
+        </div>
         <div id="scene1" class="scene">
             <div id="pin1" class="pin">
                 <img style="width: 100%; display:block;" src="the_matchmaker.jpg">
             </div>
         </div>
         <div class="container label">
-            <div class="row" style="margin-top: 15%">
+            <div class="row">
                 <div class="twelve columns">
-                        <p style="font-family: 'IM Fell Double Pica'; font-size: 2em; font-style: italic; color: #c86448;">The Matchmaker</p>
+                        <p style="font-family: 'IM Fell Double Pica'; font-size: 2em; font-style: italic; color: #c86448;">The Procuress</p>
                     </div>             
                 </div>
                 <div class="row">
                     <div class="one-third column">
                         <p>
-                            <h7>Artist</h7>&nbsp;&nbsp; Lúcio Costa and Oscar Niemeyer
-                            <br><h7>Date</h7>&nbsp;&nbsp; Brasília
-                            <br><h7>Medium/Materials</h7>&nbsp;&nbsp; Predominantly: concrete; Also: steel, glass, asphalt, sweat, blood, and tears
-                            <br><h7>Current Location</h7>&nbsp;&nbsp; Brasília, Brazil
+                            <h7>Artist</h7>&nbsp;&nbsp; <h8>Gerrit Van Honthorst</h8>
+                            <br><h7>Title</h7>&nbsp;&nbsp; <h8>The Matchmaker, or The Procuress</h8>
+                            <br><h7>Date</h7>&nbsp;&nbsp; <h8>1625</h8>
+                            <br><h7>Medium/Materials</h7>&nbsp;&nbsp; <h8>Oil on panel</h8>
+                            <br><h7>Current Location</h7>&nbsp;&nbsp; <h8>Centraal Museum, Utrecht</h8>
                         </p>
                     </div>
                     <div class="one-third column">
                         <p>
-                            
+                            An archetypal painting from the Dutch Golden Age, <em>The Procuress</em> shows a matchmaker in the midst of gesturing towards a potential customer; the young man holds a purse in his left hand, gesturing towards the lute that the girl is holding with his other hand; for Dutch speakers, this could be a pun on the Dutch word for lute, <em>luit</em>, that could also be taken to mean vagina.
+                        </p>
+                        <p>
+                            Despite the controversial subject matter, paintings explicitly depicting prostitution are considered to be common in the era. In a departure from tradition, Dutch golden age painters such as Bruegel tended to depict commoners and peasants in their daily life, rather than just the rich, famous, and/or dead subjects
                         </p>
                     </div>
                     <div class="one-third column">
                         <p>
-                            
+                            that rich patrons would pay for artists to depict. Here, a shadowy chamber in a brothel is shown to the viewer, a voyeuristic peek into the private lives of shady characters.
+                        </p>
+                        <p>
+                            Building on the highly popular Caravaggesque style (a painting style involving the dramatic juxtaposition of light and shadow), Van Honthorst employs here his distinctive device of portraying a silhouetted figure in the foreground. Conveniently, the only illumination in the room comes from a lone candle in the centre of the table, rather than the undefined and unseen light source to be found in other Caravaggesques, confining the characters to a dingy, quotidien space that betrays no delusions of grandeur.
                         </p>
                     </div>
                 </div>
@@ -112,9 +168,10 @@
                 controller = new ScrollMagic();
 
                 var timeline = new TimelineMax()
-                    .add(TweenMax.to('#pin1', 1, {opacity: '1'}))
-                    .add(TweenMax.to('#pin1', 1, {opacity: '1'}))
-                    .add(TweenMax.to('#pin1', 1, {opacity: '0'}))
+                    .add(TweenMax.to('#pin1', .2, {opacity: '0.5'}))
+                    .add(TweenMax.to('#pin1', .1, {opacity: '0.8', repeat: 3, yoyo: true}))
+                    .add(TweenMax.to('#pin1', .1, {opacity: '1', repeat: 5, yoyo: true}))
+                    .add(TweenMax.to('#pin1', .5, {opacity: '0'}))
 
                 var scene1 = new ScrollScene({
                     triggerElement: '#scene1',

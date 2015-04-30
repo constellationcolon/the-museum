@@ -34,8 +34,8 @@
             height: 100%;
             padding: 0;
             margin: 0;
-            background-color: #000000;
-            color: #EBD4BB;
+            background-color: rgb(3, 17, 54);
+            color: rgb(153, 153, 144);
         }
 
         h7
@@ -45,20 +45,24 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
+        /*h8
+        {
+            color: rgb(200, 90, 50);
+        }*/
 
         #pin0
         {
-        	position: relative;
+            position: relative;
         }
 
         #pin1
         {
-        	opacity: 1;
+            opacity: 1;
         }
 
         #pin2
         {
-        	opacity: 0;
+            opacity: 0;
         }
 
         #pin3
@@ -85,49 +89,101 @@
             position: relative;
             top: 100vh;
             width: 100vw;
-            height: 86vh;
+            height: 99vh;
+            padding-top: 10vh;
         }
 
+        #navigation
+        {
+            position: fixed;
+            z-index: 1000;
+            width: 100vw;
+            height: 10vh;
+            bottom: 0;
+            display: table;
+            background-color: rgba(3, 17, 54, 0.5);
+
+            font-size: 0.8em;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-align: center;
+            color: rgb(75, 81, 119);
+        }
+
+        #navigation a
+        {
+            text-decoration: none;
+            padding: 0 10px 0 10px;
+            color: rgb(110, 130, 160);
+        }
+
+        #links
+        {
+            display: table-cell;
+            vertical-align: middle;
+        }
+        </style>
         </style>
     </head>
 
     <body>
+         <div id="navigation">
+            <div id="links">
+                <a href="../..">Home</a>
+                <a href="../roman">Roman</a>
+                <a href="../gothic">Gothic</a>
+                <a href="../renaissance">Renaissance</a>             
+                <a href="../dutchgoldenage">Dutch Golden Age</a>
+                <span style="padding: 0 10px 0 10px;">Impressionism</span>
+                <a href="../modernarchitecture">Modern Architecture</a>
+                <a href="../neoplasticism">Neoplasticism</a>
+                <a href="../abstractexpressionism">Abstract Expressionism</a>
+            </div>
+        </div>
         <div id="scene1" class="scene">
-        	<div id="pin0">
-	            <div id="pin1" class="pin">
-	                <img style="width: 100%; display:block;" src="tbman_100.jpg">
-	            </div>
-	            <div id="pin2" class="pin">
-	                <img style="width: 100%; display:block;" src="tbman_50.jpg">
-	            </div>
+            <div id="pin0">
+                <div id="pin1" class="pin">
+                    <img style="width: 100%; display:block;" src="tbman_100.jpg">
+                </div>
+                <div id="pin2" class="pin">
+                    <img style="width: 100%; display:block;" src="tbman_50.jpg">
+                </div>
                 <div id="pin3" class="pin">
                     <img style="width: 100%; display:block;" src="tbman_0.jpg">
                 </div>
             </div>
         </div>
         <div class="container label">
-            <div class="row" style="margin-top: 10%">
+            <div class="row">
                 <div class="twelve columns">
-                        <p style="font-family: 'Playfair Display'; font-size: 1.5em; font-weight: 500; color: #c86448; text-transform: uppercase; letter-spacing: 2px;">The Boulevard Montmatre at Night</p>
+                        <p style="font-family: 'Playfair Display'; font-size: 1.5em; font-weight: 500; color: rgb(215, 172, 46); text-transform: uppercase; letter-spacing: 5px;">The Boulevard Montmartre at Night</p>
                     </div>             
                 </div>
                 <div class="row">
                     <div class="one-third column">
                         <p>
-                            <h7>Artist</h7>&nbsp;&nbsp; Lúcio Costa and Oscar Niemeyer
-                            <br><h7>Date</h7>&nbsp;&nbsp; Brasília
-                            <br><h7>Medium/Materials</h7>&nbsp;&nbsp; Predominantly: concrete; Also: steel, glass, asphalt, sweat, blood, and tears
-                            <br><h7>Current Location</h7>&nbsp;&nbsp; Brasília, Brazil
+                            <h7>Artist</h7>&nbsp;&nbsp; <h8>Camille Pissarro</h8>
+                            <br><h7>Title</h7>&nbsp;&nbsp; <h8>The Boulevard Montmartre at Night, or Boulevard Montmartre, effet de nuit</h8>
+                            <br><h7>Date</h7>&nbsp;&nbsp; <h8>1897</h8>
+                            <br><h7>Medium/Materials</h7>&nbsp;&nbsp; <h8>Oil on canvas</h8>
+                            <br><h7>Current Location</h7>&nbsp;&nbsp; <h8>The National Gallery, London, UK</h8>
                         </p>
                     </div>
                     <div class="one-third column">
                         <p>
-                            
+                            The Impressionist movement signalled, once again, a shift in subject matter and depiction methods for artists. Pioneered notably by Monet, Impressionist painters were generally interested in depicting outdoor scenes with markedly less emphasis on individuals.
+                        </p>
+                        <p>
+                            This portrayal of Paris' Montmartre by Pissarro is one such example of the thematic shift; in the wake of the industrial revolution, Pissarro here considers the modern city with all of its trappings of anonymity and homogeneity. Though details are not finely illustrated for the viewer, the painting still manages to portray the sense of looking over a rain-slicked street in Paris at night.
                         </p>
                     </div>
                     <div class="one-third column">
                         <p>
-                            
+                            The lack of detailing in Impressionist painting echoes just such a sentiment of being emotionally detached from the spectacle of a modern city such as Paris. The viewer is encouraged to experience the city as it is, with all of its bewildering distractions that all blend together into a single <em>impression</em> of the place.
+                        </p>
+                        <p>
+                            In contrast to earlier artistic depictions of dark spaces, the Parisian street here is extremely well lit at nightfall; yet, at the smallest scales, light and shadow blend together, flat on the canvas. It is only when the viewer takes a step back, and looks at it with the corner of their eye, that the three dimensional, longitudinal extent of the street manifests itself. 
                         </p>
                     </div>
                 </div>

@@ -14,7 +14,7 @@
         <!-- FONT
         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
         <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600,700" rel="stylesheet" type="text/css">
-        <link href='http://fonts.googleapis.com/css?family=IM+Fell+DW+Pica:400italic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet' type='text/css'>
         <!-- CSS
         –––––––––––––––––––––––––––––––––––––––––––––––––– -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" rel="stylesheet" type="text/css">
@@ -35,7 +35,7 @@
             padding: 0;
             margin: 0;
             background-color: #ffffff;
-            color: #999999;
+            color: #8A6B48;
         }
 
         h7
@@ -47,68 +47,56 @@
         }
         /*h8
         {
-        	color: rgb(150, 150, 80);
+            color: rgb(130, 180, 250);
         }*/
-
-        #pin0
-        {
-        	position: relative;
-        }
-
-        #pin1
-        {
-        	opacity: 1;
-        }
-
-        #pin2
-        {
-        	opacity: 0;
-        }
 
         .scene
         {
-            margin-top: 50vh; 
+            height: 100vh;
+            width: 100vw;
+            margin-bottom: 400px;
+            background-color: #ffffff;
+            /*margin-top: 50vh; */
             /*padding: 50px;*/
 
             /*outline: 1px dotted blue;*/
         }
 
-        .pin
-        {
-            position: absolute;
-            top: -50vh;
-        }
-
         .label
         {
-            position: relative;
-            top: 70vh;
+            height: 100vh;
             width: 100vw;
-            height: 89vh;
+            background-color: #ffffff;
+            padding: 15vh 0 0 0;
         }
+
+        .slide
+        {
+            width: 100%;
+        }
+
         #navigation
         {
             position: fixed;
-            z-index: 1000;
+            z-index: 100;
             width: 100vw;
-            bottom: 0;
             height: 10vh;
             display: table;
-            background-color: rgba(256, 256, 256, 0.5);
+            background-color: rgba(255, 255, 255, 0.5);
 
             font-size: 0.8em;
             text-transform: uppercase;
             font-weight: 600;
             letter-spacing: 1px;
             text-align: center;
-            color: rgb(211, 223, 231);
+            color: #999999;
         }
 
         #navigation a
         {
             text-decoration: none;
             padding: 0 10px 0 10px;
-            color: rgb(69, 96, 151);
+            color: #333333;
         }
 
         #links
@@ -116,16 +104,17 @@
             display: table-cell;
             vertical-align: middle;
         }
+
         </style>
     </head>
 
     <body>
-    	<div id="navigation">
+        <div id="navigation">
             <div id="links">
-	            <a href="../..">Home</a>
-                <a href="../roman">Roman</a>
+                <a href="../..">Home</a>
+                <span style="padding: 0 10px 0 10px;">Roman</span>
                 <a href="../gothic">Gothic</a>
-                <span style="padding: 0 10px 0 10px;">Renaissance</span>
+                <a href="../renaissance">Renaissance</a>
                 <a href="../dutchgoldenage">Dutch Golden Age</a>
                 <a href="../impressionism">Impressionism</a>
                 <a href="../modernarchitecture">Modern Architecture</a>
@@ -133,46 +122,54 @@
                 <a href="../abstractexpressionism">Abstract Expressionism</a>
             </div>
         </div>
+
         <div id="scene1" class="scene">
-        	<div id="pin0">
-	            <div id="pin1" class="pin">
-	                <img style="width: 100%; display:block;" src="tdotk.png">
-	            </div>
-	            <div id="pin2" class="pin">
-	                <img style="width: 100%; display:block;" src="tdotk_grid.png">
-	            </div>
-            </div>
+            <img class="slide" src="maison_carree_1.jpg">
         </div>
-        <div class="container label">
-            <div class="row" style="margin-top: 0%">
+        <div id="scene2" class="scene">
+            <img class="slide" src="maison_carree_2.jpg">
+        </div>
+        <div id="scene3" class="scene">
+            <img class="slide" src="maison_carree_3.jpg">
+        </div>
+        <div id="scene4" class="scene">
+            <img class="slide" src="maison_carree_4.jpg">
+        </div>
+        <div id="scene5" class="scene">
+            <img class="slide" src="maison_carree_5.jpg">
+        </div>
+        <div id="scene6" class="scene">
+            <img style="height: 100%; display: block; margin: auto;" src="maison_carree_6.jpg">
+        </div>
+        <div id="scene7" class="container label" style="width: 100vw; background-color: white;">
+            <div class="row">
                 <div class="twelve columns">
-                        <p style="font-family: 'IM Fell DW Pica'; font-size: 2em; font-style: italic; color: rgb(234, 189, 82);">The Delivery of the Keys</p>
+                        <p style="font-family: 'Cinzel'; font-size: 2em; font-weight: 500; color: #E1D2BF; text-transform: uppercase; letter-spacing: 2px;">Maison Carée</p>
                     </div>             
                 </div>
                 <div class="row">
                     <div class="one-third column">
                         <p>
-                            <h7>Artist</h7>&nbsp;&nbsp; <h8>Pietro Perugino</h8>
-                            <br><h7>Title</h7>&nbsp;&nbsp; <h8>Delivery of the Keys, or Christ Giving the Keys to St. Peter</h8>
-                            <br><h7>Date</h7>&nbsp;&nbsp; <h8>1481–1482</h8>
-                            <br><h7>Medium/Materials</h7>&nbsp;&nbsp; <h8>Fresco</h8>
-                            <br><h7>Current Location</h7>&nbsp;&nbsp; <h8>Sistine Chapel, Rome</h8>
+                            <h7>Artist</h7>&nbsp;&nbsp; <h8>Unknown; Patronised by Marcus Vipsanius Agrippa</h8>
+                            <br><h7>Title</h7>&nbsp;&nbsp; <h8>Maison Carrée (French: Square House)</h8>
+                            <br><h7>Date</h7>&nbsp;&nbsp; <h8>16 BC</h8>
+                            <br><h7>Medium/Materials</h7>&nbsp;&nbsp; <h8>Limestone</h8>
+                            <br><h7>Current Location</h7>&nbsp;&nbsp; <h8>Nîmes, France</h8>
                         </p>
                     </div>
                     <div class="one-third column">
                         <p>
-                            This masterful piece by Perugino showcases the classic Renaissance <em>vanishing point</em> technique, in which the three dimensional space inhabited by humans is translated faithfully unto two dimensional canvases by way of arranging subjects in a grid that converges in a vanishing point on the horizon. Here, the technique is made all the more blatant by the grid of the public piazza on which the disciples congregate, a testament to the flourishing and convergent scientific and artistic worlds of the Renaissance.
+                            The Maison Carrée in Nîmes, France, is one of the best preserved Roman temples to be found anywhere in the former Roman Empire. Although its name means "square house" in French, the monument is actually rectangular in shape.
                         </p>
                         <p>
-                        	In emerging from the Dark Ages, Renaissance painters such as Perugino sought also to reclaim the bygone glory of the Romans and the Greeks, whilst still keeping true to the Christian faith. 
+                            Though the temple is constructed after the fashion of Greek and Etruscan temples, its style differs most markedly from the quintessential Greek temple in that its free-standing columns are only to be found on the front portico, rather than all around the temple, making for a defined entrance and exit on its west side. Floral and plant motifs dominate the capitals on its Corinthian columns, another
                         </p>
                     </div>
                     <div class="one-third column">
                         <p>
-                            Behind the disciples, two Roman triumphal arches flank the sides of an octagonal building reminiscent of the Dome of the Rock in Jerusalem. The scene is set outdoors, in an open, sunlit public square that is the antithesis to the enclosed, dark spaces of the Gothic cathedral, symbolising a return to the public life of scholarship and artistry that flourished in Ancient Greece and Rome.
-                        <p>                        	
-                        </p>
-                            In one glance, the priorities of the Renaissance man are clear to see via the places on the canvas that various subjects inhabit: at the centre, stands the divine, brought down from its heavenly place above in the Gothic era, and into the secular, empirical space inhabited by the Renaissance Man.
+                            notable departure from the Greek tendency to decorate their temples with figures of the gods, mythical animals, and human beings. This was primarily because the temple was dedicated to the Caesars, not deities, as temples usually are.
+
+                            Deviations notwithstanding, the temple remains true to traditional Greek ideals of symmetry and proportion, providing simultaneously an open, inviting public space for congregations and a closed, private space for veneration within the cella. Its size is deceptively diminutive from afar; up close, the colossal size of the monument serves as an awe-inspiring reminder to each citizen of their civic responsibilities. 
                         </p>
                     </div>
                 </div>
@@ -185,17 +182,25 @@
             $(function() {
                 controller = new ScrollMagic();
 
-                var timeline = new TimelineMax()
-                    .add(TweenMax.to('#pin2', 0.5, {opacity: '1'}))
+                var slideno = document.querySelectorAll("div.scene");
 
-                var scene1 = new ScrollScene({
-                    triggerElement: '#scene1',
-                    duration: 1000
-                })
-                    .setPin('#pin0')
-                    .setTween(timeline)
-                    .addTo(controller)
-                    // .addIndicators();
+                for (var i=0; i<slideno.length; i++) {
+                    new ScrollScene({
+                        triggerElement: slideno[i],
+                        triggerHook: 'onLeave'
+                    })
+                        .setPin(slideno[i])
+                        .addTo(controller)
+                        .addIndicators();
+                }
+
+                new ScrollScene({
+                        triggerElement: '#scene7',
+                        triggerHook: 'onLeave'
+                    })
+                        .setPin('#scene8')
+                        .addTo(controller)
+                        .addIndicators();
             });
         </script>
     </body>

@@ -39,8 +39,10 @@
 	        }
         	#video
         	{
+        		position: relative;
         		width: 100vw;
         		height: 100vh;
+        		z-index: 100;
         	}
         	.label
         	{
@@ -48,9 +50,53 @@
         		width: 100vw;
         		height: 92vh;
         	}
+        	#navigation
+	        {
+	            position: fixed;
+	            z-index: 10;
+	            width: 100vw;
+	            height: 10vh;
+	            bottom: 0;
+	            display: table;
+	            background-color: rgba(256, 256, 256, 0.5);
+
+	            font-size: 0.8em;
+	            text-transform: uppercase;
+	            font-weight: 600;
+	            letter-spacing: 1px;
+	            text-align: center;
+	            color: #DDDDDD;
+	        }
+
+	        #navigation a
+	        {
+	            text-decoration: none;
+	            padding: 0 10px 0 10px;
+	            color: rgb(200, 170, 160);
+	        }
+
+	        #links
+	        {
+	            display: table-cell;
+	            vertical-align: middle;
+	        }
         </style>
     </head>
     <body>
+    	<div id="navigation">
+            <div id="links">
+	            <a href="../..">Home</a>
+                <a href="../roman">Roman</a>
+                <a href="../gothic">Gothic</a>
+                <a href="../renaissance">Renaissance</a>             
+                <a href="../dutchgoldenage">Dutch Golden Age</a>
+                <a href="../impressionism">Impressionism</a>
+                <span style="padding: 0 10px 0 10px;">Modern Architecture</span>
+                
+                <a href="../neoplasticism">Neoplasticism</a>
+                <a href="../abstractexpressionism">Abstract Expressionism</a>
+            </div>
+        </div>
     	<div id="video">
 	    	<iframe src="https://player.vimeo.com/video/52815139" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
     	</div>
@@ -63,25 +109,31 @@
 				<div class="row">
 					<div class="one-third column">
                         <p>
-                            <h7>Artist</h7>&nbsp;&nbsp; Lúcio Costa and Oscar Niemeyer
-                            <br><h7>Date</h7>&nbsp;&nbsp; Brasília
-                            <br><h7>Medium/Materials</h7>&nbsp;&nbsp; Predominantly: concrete; Also: steel, glass, asphalt, sweat, blood, and tears
+                            <h7>Artists</h7>&nbsp;&nbsp; Lúcio Costa and Oscar Niemeyer
+                            <br><h7>Title</h7>&nbsp;&nbsp; Brasília
+                            <br><h7>Date</h7>&nbsp;&nbsp; 1956
+                            <br><h7>Medium/Materials</h7>&nbsp;&nbsp; Predominantly: concrete; Also: steel, glass, asphalt
                             <br><h7>Current Location</h7>&nbsp;&nbsp; Brasília, Brazil
                         </p>
 					</div>
 					<div class="one-third column">
                         <p>
-                            
+                            Brasília, the federal capital of Brazil, was developed jointly by Lúcio Costa and Oscar Niemeyer, an urban planner and an architect respectively, with the ideal of the centrally planned, modern city in mind.
+                        </p>
+                        <p>
+                        	In implementation, however, the seemingly utopian design of the city fell short of expectations. Though plenty of attention was paid to the overall aesthetic features of the city, with plenty of awe-inspiring, geometric structures of concrete, glass, and steel, the designers seemed to have forgotten that actual human beings were going to inhabit the space that these colossal structures were set down in.
                         </p>
                     </div>
                     <div class="one-third column">
                         <p>
-                            
+                        	In their single-minded focus on experimenting with the geometries of spaces within and outside of buildings, these architects have completely left behind the historical accessibility and utility of organically grown cities, with their narrow alleys and compact jungles of buildings that enable communal living. Public space thence becomes a platonic concept in the abstract, to be played with, prodded at, theorised of, but never to be lived in.
+                        </p>
+                        <p>
+                            In spite of these noted shortcomings, Brasília has been designated a UNESCO World Heritage site for its modernist architecture and urban planning.
                         </p>
                     </div>
 				</div>
 			</div>
-
     	</div>
 	</body>
 </html>
