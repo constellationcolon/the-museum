@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Basic Page Needs
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <meta charset="utf-8">
+        <title>the{&nbsp;&nbsp;}museum</title>
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <!-- Mobile Specific Metas
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- FONT
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600,700" rel="stylesheet" type="text/css">
+        <link href='http://fonts.googleapis.com/css?family=Playfair+Display:500' rel='stylesheet' type='text/css'>
+        <!-- CSS
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" rel="stylesheet" type="text/css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" rel="stylesheet" type="text/css">
+        <!-- Favicon
+        –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+        <link rel="icon" type="image/png" href="images/favicon.png">
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
+        <script src="https://rawgit.com/janpaepke/ScrollMagic/master/js/jquery.scrollmagic.js"></script>
+        <script src="https://rawgit.com/janpaepke/ScrollMagic/master/js/jquery.scrollmagic.debug.js"></script>
+
+        <style>
+        html, body
+        {
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            background-color: #000000;
+            color: #EBD4BB;
+        }
+
+        h7
+        {
+            font-weight: 700;
+            font-size: .7em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        #pin0
+        {
+        	position: relative;
+        }
+
+        #pin1
+        {
+        	opacity: 1;
+        }
+
+        #pin2
+        {
+        	opacity: 0;
+        }
+
+        #pin3
+        {
+            opacity: 0;
+        }
+
+        .scene
+        {
+            margin-top: 50vh; 
+            /*padding: 50px;*/
+
+            /*outline: 1px dotted blue;*/
+        }
+
+        .pin
+        {
+            position: absolute;
+            top: -50vh;
+        }
+
+        .label
+        {
+            position: relative;
+            top: 100vh;
+            width: 100vw;
+            height: 86vh;
+        }
+
+        </style>
+    </head>
+
+    <body>
+        <div id="scene1" class="scene">
+        	<div id="pin0">
+	            <div id="pin1" class="pin">
+	                <img style="width: 100%; display:block;" src="tbman_100.jpg">
+	            </div>
+	            <div id="pin2" class="pin">
+	                <img style="width: 100%; display:block;" src="tbman_50.jpg">
+	            </div>
+                <div id="pin3" class="pin">
+                    <img style="width: 100%; display:block;" src="tbman_0.jpg">
+                </div>
+            </div>
+        </div>
+        <div class="container label">
+            <div class="row" style="margin-top: 10%">
+                <div class="twelve columns">
+                        <p style="font-family: 'Playfair Display'; font-size: 1.5em; font-weight: 500; color: #c86448; text-transform: uppercase; letter-spacing: 2px;">The Boulevard Montmatre at Night</p>
+                    </div>             
+                </div>
+                <div class="row">
+                    <div class="one-third column">
+                        <p>
+                            <h7>Artist</h7>&nbsp;&nbsp; Lúcio Costa and Oscar Niemeyer
+                            <br><h7>Date</h7>&nbsp;&nbsp; Brasília
+                            <br><h7>Medium/Materials</h7>&nbsp;&nbsp; Predominantly: concrete; Also: steel, glass, asphalt, sweat, blood, and tears
+                            <br><h7>Current Location</h7>&nbsp;&nbsp; Brasília, Brazil
+                        </p>
+                    </div>
+                    <div class="one-third column">
+                        <p>
+                            
+                        </p>
+                    </div>
+                    <div class="one-third column">
+                        <p>
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var controller;
+
+            $(function() {
+                controller = new ScrollMagic();
+
+                var timeline = new TimelineMax()
+                    .add(TweenMax.to('#pin2', 0.5, {opacity: '1'}))
+                    .add(TweenMax.to('#pin3', 0.5, {opacity: '1'}))
+
+                var scene1 = new ScrollScene({
+                    triggerElement: '#scene1',
+                    duration: 1500
+                })
+                    .setPin('#pin0')
+                    .setTween(timeline)
+                    .addTo(controller)
+                    // .addIndicators();
+            });
+        </script>
+    </body>
+</html>

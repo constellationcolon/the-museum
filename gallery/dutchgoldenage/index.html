@@ -112,13 +112,13 @@
                 controller = new ScrollMagic();
 
                 var timeline = new TimelineMax()
-                    .add(TweenMax.to('#pin1', 0.5, {opacity: '1'}))
-                    .add(TweenMax.to('#pin1', 0.5, {opacity: '1'}))
-                    .add(TweenMax.to('#pin1', 0.5, {opacity: '0'}))
+                    .add(TweenMax.to('#pin1', 1, {opacity: '1'}))
+                    .add(TweenMax.to('#pin1', 1, {opacity: '1'}))
+                    .add(TweenMax.to('#pin1', 1, {opacity: '0'}))
 
                 var scene1 = new ScrollScene({
                     triggerElement: '#scene1',
-                    duration: 600
+                    duration: 2000
                 })
                     .setPin('#pin1')
                     .setTween(timeline)
